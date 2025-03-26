@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Barber</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --apple-black: #1d1d1f;
+            --apple-white: #f5f5f7;
+            --apple-gray: #86868b;
+            --apple-blue: #06c;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, sans-serif;
+            color: var(--apple-black);
+            background-color: var(--apple-white);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Dynamic Island Nav */
+        .dynamic-island {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(29, 29, 31, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: 100px;
+            padding: 8px 20px;
+            display: flex;
+            gap: 15px;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            
+         
+        }
+
+        .dynamic-island:hover {
+            transform: translateX(-50%) scale(1.05);
+        }
+
+        .nav-link {
+            color: var(--apple-white);
+            text-decoration: none;
+            font-size: 14px;
+            opacity: 0.8;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .nav-link:hover {
+            opacity: 1;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 100px;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--apple-blue);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .services p {
+            font-size: 1.2rem;
+            color: var(--apple-gray);
+            margin-bottom: 50px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-item {
+            padding: 30px;
+            border-radius: 18px;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--apple-black);
+            color: var(--apple-white);
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--apple-white);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .dynamic-island {
+                padding: 8px 15px;
+                gap: 10px;
+            }
+            
+            .nav-link {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Dynamic Island Navigation -->
+    <nav class="dynamic-island">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="reviews.html" class="nav-link">reviews</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>American Barber</h1>
+        <p>Precision cuts in a modern environment</p>
+        <a href="#services" class="btn btn-primary">View Services</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <p>Expert grooming with attention to detail</p>
+        
+        <div class="service-grid">
+            <div class="service-item">
+                <h3>Classic Cut</h3>
+                <p>Traditional haircut with modern techniques</p>
+                <div class="price">$45</div>
+            </div>
+            <div class="service-item">
+                <h3>Beard Trim</h3>
+                <p>Precision shaping and detailing</p>
+                <div class="price">$30</div>
+            </div>
+            <div class="service-item">
+                <h3>Hot Towel Shave</h3>
+                <p>The ultimate traditional experience</p>
+                <div class="price">$55</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-links">
+            <a href="tel:123456789"><i class="fas fa-phone"></i> (123) 456-789</a>
+            <a href="mailto:book@americanbarber.com"><i class="fas fa-envelope"></i> book@americanbarber.com</a>
+        </div>
+        <p>© 2025 American Barber. All rights reserved.</p>
+    </footer>
+</body>
+</html>
