@@ -75,7 +75,7 @@
             text-align: center;
             padding: 0 20px;
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                    url('https://i.postimg.cc/1zMnQyBr/Whats-App-Image-2025-03-28-at-16.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -95,23 +95,36 @@
             opacity: 0.9;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: 100px;
-            font-size: 1rem;
-            text-decoration: none;
-            transition: var(--transition);
-        }
+/* Button Grid */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
 
-        .btn-primary {
-            background-color: var(--apple-blue);
-            color: white;
-        }
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 100px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: var(--transition);
+    white-space: nowrap;
+}
 
-        .btn:hover {
-            transform: scale(1.05);
-        }
+.btn-primary {
+    background-color: var(--apple-blue);
+    color: white;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+        
 
         /* Services Section */
         .services {
@@ -215,13 +228,21 @@
         <a href="#services" class="nav-link">Services</a>
         <a href="#contact" class="nav-link">Contact</a>
         <a href="reviews.html" class="nav-link">reviews</a>
+        <a href="gallary.html" class="nav-link">Gallary</a>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+     <!-- Hero Section -->
+     <section class="hero">
         <h1>American Barber</h1>
         <p>Precision cuts in a modern environment</p>
-        <a href="#services" class="btn btn-primary">View Services</a>
+        
+        <div class="button-grid">
+            <a href="#services" class="btn btn-primary">View Services</a>
+            <a href="#contact" class="btn btn-primary">View Contacts</a>
+            <a href="reviews.html" class="btn btn-primary">View Reviews</a>
+            <a href="gallery.html" class="btn btn-primary">View Gallery</a>
+        </div>
     </section>
 
     <!-- Services Section -->
